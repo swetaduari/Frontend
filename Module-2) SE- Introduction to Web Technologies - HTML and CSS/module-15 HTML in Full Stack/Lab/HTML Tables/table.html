@@ -1,0 +1,65 @@
+<!-- Task: Create a product catalog table that includes the following columns:
+o Product Name
+o Product Image (use placeholder image URLs)
+o Price
+o Description
+o Availability (in stock, out of stock)
+Additional Requirements:
+o Use thead for the table header.
+o Add a border and some basic styling using inline CSS.
+o Use colspan or rowspan to merge cells where applicable-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Product Catalog</title>
+</head>
+<body>
+
+    <h1>Product Catalog</h1>
+
+    <table style="width:100%; border-collapse: collapse; text-align: left;">
+        
+        <thead>
+            <tr style="background-color: #f2f2f2;">
+                <th style="border: 1px solid black; padding: 8px;">Product Name</th>
+                <th style="border: 1px solid black; padding: 8px;">Product Image</th>
+                <th style="border: 1px solid black; padding: 8px;">Price</th>
+                <th style="border: 1px solid black; padding: 8px;">Description</th>
+                <th style="border: 1px solid black; padding: 8px;">Availability</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td style="border: 1px solid black; padding: 8px;">Laptop</td>
+                <td style="border: 1px solid black; padding: 8px;">
+                    <img src="https://via.placeholder.com/100" alt="Laptop">
+                </td>
+                <td style="border: 1px solid black; padding: 8px;">$800</td>
+                <td style="border: 1px solid black; padding: 8px;">High-performance laptop</td>
+                <td style="border: 1px solid black; padding: 8px;">In Stock</td>
+            </tr>
+
+            <tr>
+                <td style="border: 1px solid black; padding: 8px;">Smartphone</td>
+                <td style="border: 1px solid black; padding: 8px;">
+                    <img src="https://via.placeholder.com/100" alt="Smartphone">
+                </td>
+                <td style="border: 1px solid black; padding: 8px;">$500</td>
+                <td style="border: 1px solid black; padding: 8px;">Latest model smartphone</td>
+                <td style="border: 1px solid black; padding: 8px;">Out of Stock</td>
+            </tr>
+
+            <!-- Example of colspan -->
+            <tr>
+                <td colspan="5" style="border: 1px solid black; padding: 8px; text-align: center; background-color: #eaeaea;">
+                    More products coming soon!
+                </td>
+            </tr>
+        </tbody>
+
+    </table>
+
+</body>
+</html>

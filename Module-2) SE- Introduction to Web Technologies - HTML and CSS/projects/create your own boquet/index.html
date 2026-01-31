@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bloomify – Flower Shop</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    body {
+      background: #fff4f8;
+    }
+  </style>
+</head>
+
+<body class="text-gray-800">
+
+<!-- ================= NAVBAR ================= -->
+<nav class="bg-pink-100 shadow-sm sticky top-0 z-50">
+  <div class="container flex justify-between items-center py-3">
+    <div class="flex items-center gap-2 text-pink-600 font-bold text-xl">
+      🌸 Bloomify
+    </div>
+    <ul class="hidden md:flex gap-6 text-sm font-medium">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Shop</a></li>
+      <li><a href="#"></a>Contact</li>
+      <li>Occasions ▾</li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ================= HERO ================= -->
+<section class="bg-gradient-to-b from-pink-100 to-pink-50 py-20">
+  <div class="container grid md:grid-cols-2 gap-10 items-center">
+    <div>
+      <span class="bg-white px-4 py-1 rounded-full text-pink-500 text-sm shadow">
+        Fresh Blooms • Same-day delivery
+      </span>
+
+      <h1 class="text-5xl font-extrabold text-pink-800 mt-6 leading-tight">
+        Send Love in Every<br/>Petal
+      </h1>
+
+      <p class="text-pink-700 mt-4 max-w-md">
+        Curated flowers for every occasion. Soft shades of pink,
+        hand-tied perfection, and heartfelt delivery.
+      </p>
+
+      <div class="flex gap-4 mt-6">
+        <button class="bg-pink-600 text-white px-6 py-3 rounded-lg shadow hover:bg-pink-700">
+          Build a Bouquet
+        </button>
+        <button class="border border-pink-400 px-6 py-3 rounded-lg text-pink-600 hover:bg-pink-100">
+          Contact Us
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="bg-pink-600 text-white text-center py-2 mt-16 text-sm">
+    <marquee>Valentine Special: 20% OFF on Love Bouquets</marquee>
+  </div>
+</section>
+
+<!-- ================= ABOUT ================= -->
+<section class="container py-20">
+  <div class="row align-items-center">
+    <div class="col-md-6">
+      <h2 class="text-3xl font-bold text-pink-800 mb-4">
+        About Our Flowers
+      </h2>
+      <p class="text-pink-700">
+        We curate the finest blooms from sustainable farms.
+        Our arrangements embrace soft pink palettes for a
+        serene, romantic aesthetic — perfect for weddings,
+        greetings, lovers, and engagements.
+      </p>
+    </div>
+
+    <div class="col-md-6 grid grid-cols-3 gap-4 mt-6 md:mt-0">
+      <div class="bg-pink-200 p-6 rounded-lg text-center">Bloom 1</div>
+      <div class="bg-pink-200 p-6 rounded-lg text-center">Bloom 2</div>
+      <div class="bg-pink-200 p-6 rounded-lg text-center">Bloom 3</div>
+      <div class="bg-pink-200 p-6 rounded-lg text-center">Bloom 4</div>
+      <div class="bg-pink-200 p-6 rounded-lg text-center">Bloom 5</div>
+      <div class="bg-pink-200 p-6 rounded-lg text-center">Bloom 6</div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SHOP ================= -->
+<section class="container pb-20">
+  <h2 class="text-3xl font-bold text-pink-800 mb-8">Bouquet Shop</h2>
+
+  <div class="row g-4">
+    <!-- Product -->
+    <div class="col-sm-6 col-lg-4">
+      <div class="bg-white rounded-xl shadow p-3">
+        <img src="https://images.unsplash.com/photo-1526047932273-341f2a7631f9"
+             class="rounded-lg h-52 w-full object-cover">
+        <div class="mt-3">
+          <h4 class="font-semibold text-pink-800">Rose Romance</h4>
+          <div class="flex justify-between items-center mt-2">
+            <span class="text-pink-600 font-bold">$49.99</span>
+            <button class="bg-pink-600 text-white px-4 py-1 rounded-md text-sm">
+              Buy
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Duplicate cards -->
+    <div class="col-sm-6 col-lg-4"><div class="bg-white rounded-xl shadow p-3"><img src="https://images.unsplash.com/photo-1526047932273-341f2a7631f9" class="rounded-lg h-52 w-full object-cover"><h4 class="mt-3 text-pink-800 font-semibold">Peony Blush</h4><div class="flex justify-between"><span class="text-pink-600">$59.99</span><button class="bg-pink-600 text-white px-4 py-1 rounded">Buy</button></div></div></div>
+    <div class="col-sm-6 col-lg-4"><div class="bg-white rounded-xl shadow p-3"><img src="https://images.unsplash.com/photo-1526047932273-341f2a7631f9" class="rounded-lg h-52 w-full object-cover"><h4 class="mt-3 text-pink-800 font-semibold">Tulip Charm</h4><div class="flex justify-between"><span class="text-pink-600">$39.99</span><button class="bg-pink-600 text-white px-4 py-1 rounded">Buy</button></div></div></div>
+  </div>
+</section>
+
+<!-- ================= BUILD BOUQUET ================= -->
+<section class="container pb-20">
+  <h2 class="text-3xl font-bold text-pink-800 mb-2">
+    Create Your Own Bouquet
+  </h2>
+  <p class="text-pink-700 mb-6">
+    Choose multiple flowers and quantities. Build a personalized bouquet.
+  </p>
+
+  <div class="bg-white rounded-xl shadow p-6 grid md:grid-cols-2 gap-4">
+    <div class="border p-4 rounded-lg">Rose — $4.50</div>
+    <div class="border p-4 rounded-lg">Peony — $5.00</div>
+    <div class="border p-4 rounded-lg">Tulip — $3.00</div>
+    <div class="border p-4 rounded-lg">Lily — $4.00</div>
+  </div>
+
+  <div class="bg-white mt-6 rounded-xl shadow p-6">
+    <div class="flex justify-between">
+      <span>Lily × 4</span>
+      <span>$16</span>
+    </div>
+    <hr class="my-3">
+    <div class="flex justify-between font-bold text-pink-800">
+      <span>Total</span>
+      <span>$16.00</span>
+    </div>
+
+    <button class="w-full bg-pink-700 text-white py-3 rounded-lg mt-4">
+      Place Order
+    </button>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section class="container pb-20">
+  <h2 class="text-3xl font-bold text-pink-800 mb-8">Contact Us</h2>
+
+  <div class="row g-4">
+    <div class="col-md-6 bg-white p-6 rounded-xl shadow">
+      <input class="form-control mb-3" placeholder="Your name">
+      <input class="form-control mb-3" placeholder="Email">
+      <textarea class="form-control mb-3" rows="4" placeholder="Message"></textarea>
+      <button class="bg-pink-600 text-white px-6 py-2 rounded">Send</button>
+    </div>
+
+    <div class="col-md-6 bg-white p-6 rounded-xl shadow text-sm">
+      <p>📍 123 Bloom St, Petal City, PC 10001</p>
+      <p>📞 +1 (555) 123-4567</p>
+      <p>✉ hello@bloomify.com</p>
+      <iframe class="w-full h-48 mt-4 rounded"
+        src="https://maps.google.com/maps?q=new%20york&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="bg-pink-800 text-pink-100 py-8">
+  <div class="container grid md:grid-cols-3 gap-6 text-sm">
+    <div>
+      <h4 class="font-bold mb-2">Bloomify</h4>
+      Soft shades of pink, delivered with love.
+    </div>
+    <div>
+      <h4 class="font-bold mb-2">Address</h4>
+      123 Bloom St<br/>Petal City, PC 10001
+    </div>
+    <div>
+      <h4 class="font-bold mb-2">Follow Us</h4>
+      Facebook • Instagram • Twitter
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
