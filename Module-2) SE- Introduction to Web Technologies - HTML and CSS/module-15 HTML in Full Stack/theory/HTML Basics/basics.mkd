@@ -1,0 +1,153 @@
+# HTML BASICS
+**Question 1: Define HTML. What is the purpose of HTML in web development?**
+HTML (HyperText Markup Language) is the standard markup language used to create and structure content on the web.
+
+Purpose of HTML in web development:
+Defines the structure of a webpage
+Organizes content such as text, images, links, forms, and tables
+Provides a framework that works with CSS (styling) and JavaScript (interactivity)
+Ensures content can be properly displayed by web browsers
+
+
+
+**Question 2: Explain the basic structure of an HTML document. Identify the mandatory tags**
+
+```<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Web Page</title>
+</head>
+<body>
+    <h1>Hello, world!</h1>
+    <p>This is my first webpage.</p>
+</body>
+</html>
+```
+
+**What each part does and their purposes.**
+
+<!DOCTYPE html>
+
+Tells the browser this is HTML5
+
+<html>
+
+The root element — everything goes inside this
+
+<head>
+
+Info about the page (not visible on the page)
+
+Common things inside:
+
+<title>  page title (shows in browser tab)
+
+<meta>  character set, responsiveness, etc.
+
+<link>  CSS files
+
+<script>  JavaScript (sometimes)
+
+<body>
+
+Everything visible on the webpage
+
+Text, images, buttons, links, etc.
+
+**Question 3: What is the difference between block-level elements and inline elements in
+HTML? Provide examples of each.**
+
+Block-level elements
+
+Start on a new line
+
+Take up the full width available by default
+
+Can contain other block or inline elements
+
+Examples:
+```
+<div>Container</div>
+<p>Paragraph</p>
+<h1>Heading</h1>
+<ul>
+  <li>List item</li>
+</ul>
+```
+
+Common block-level elements:
+<div>, <p>, <h1>–<h6>, <section>, <article>, <ul>, <ol>
+
+Inline elements
+
+Do not start on a new line
+
+Take up only as much width as needed
+
+Usually contain text or other inline elements
+
+Examples:
+```
+<span>Text</span>
+<a href="#">Link</a>
+<strong>Bold text</strong>
+<img src="image.jpg" alt="Image">
+```
+
+
+Common inline elements:
+<span>, <a>, <strong>, <em>, <img>
+
+
+**Key differences (quick table)**
+|Feature|Block-level	|Inline|
+|---|---|---|
+|New line|	Yes	|No|
+|Width	|Full width	|Content width|
+
+
+**Question 4: Discuss the role of semantic HTML. Why is it important for accessibility and SEO?
+Provide examples of semantic elements.**
+Role of Semantic HTML
+
+Semantic HTML uses elements that clearly describe their meaning and purpose in the webpage structure, rather than just how they look. These elements tell browsers, screen readers, and search engines what the content is, not just how to display it.
+
+1. Accessibility
+
+Screen readers rely on semantic elements to understand page structure.
+
+Helps users with disabilities navigate content more easily.
+
+Improves keyboard navigation and assistive technology support.
+
+Example:
+A screen reader can identify <nav> as navigation, <main> as main content, and <footer> as footer sections.
+
+2. SEO (Search Engine Optimization)
+
+Search engines use semantic tags to better understand page content.
+
+Proper structure helps search engines rank and index pages more accurately.
+
+Improves visibility in search results.
+
+Example:
+Using <article> for blog posts helps search engines recognize independent content.
+
+3. Code readability & maintainability
+
+Makes HTML easier for developers to read and maintain.
+
+Reduces confusion compared to excessive use of <div> tags.
+
+Examples of semantic HTML elements
+``
+<header>Page header</header>
+<nav>Navigation links</nav>
+<main>Main content</main>
+<section>Related section</section>
+<article>Independent content</article>
+<aside>Sidebar content</aside>
+<footer>Footer content</footer>
+``
