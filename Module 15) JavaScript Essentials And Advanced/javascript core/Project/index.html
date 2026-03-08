@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pet Systems</title>
+
+  <!-- Tailwind CSS v4 -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheets" href="style.css" />
+  <script src="main.js"></script>
+</head>
+
+<body  class="bg-gray-50 text-gray-800 overflow-x-hidden">
+<div id="loader">
+
+<!-- ================= SIDEBAR OVERLAY ================= -->
+<div id="overlay"
+     class="fixed inset-0 bg-black/50 z-40 hidden"></div>
+
+<!-- ================= SIDEBAR ================= -->
+<aside id="sidebar"
+       class="fixed top-0 left-0 h-full w-64 bg-white shadow-lg z-50
+              transform -translate-x-full transition-transform duration-300">
+
+  <div class="p-4 flex items-center justify-between border-b">
+    <h2 class="text-xl font-bold text-emerald-600">PetSystems</h2>
+    <button id="closeSidebar" class="text-2xl">&times;</button>
+  </div>
+
+  <nav class="p-4 space-y-4 font-medium">
+    <a href="#" class="block hover:text-emerald-600">Home</a>
+    <a href="#" class="block hover:text-emerald-600">Products</a>
+    <a href="#" class="block hover:text-emerald-600">Services</a>
+    <a href="#" class="block hover:text-emerald-600">About</a>
+    <a href="#" class="block hover:text-emerald-600">Contact</a>
+  </nav>
+</aside>
+
+<!-- ================= HEADER ================= -->
+<header class="bg-white shadow relative z-30">
+  <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
+
+    <!-- Hamburger -->
+    <button id="openSidebar" class="md:hidden text-2xl">
+      ☰
+    </button>
+
+    <h1 class="text-2xl font-bold text-emerald-600">
+      PetSystems
+    </h1>
+
+    <!-- Desktop Nav -->
+    <nav class="hidden md:flex space-x-6 font-medium">
+      <a href="#" class="hover:text-emerald-600">Home</a>
+      <a href="#" class="hover:text-emerald-600">Products</a>
+      <a href="#" class="hover:text-emerald-600">Services</a>
+      <a href="#" class="hover:text-emerald-600">About</a>
+      <a href="#" class="hover:text-emerald-600">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ================= SLIDER ================= -->
+<section class="relative overflow-hidden">
+  <div id="slider" class="flex transition-transform duration-500">
+
+    <div class="min-w-full bg-emerald-100 py-20 text-center">
+      <h2 class="text-4xl font-bold mb-4">Smart Pet Care Systems</h2>
+      <p>Automated solutions for modern pet owners.</p>
+    </div>
+
+    <div class="min-w-full bg-blue-100 py-20 text-center">
+      <h2 class="text-4xl font-bold mb-4">Healthy & Happy Pets</h2>
+      <p>Track nutrition, activity, and well-being.</p>
+    </div>
+
+    <div class="min-w-full bg-amber-100 py-20 text-center">
+      <h2 class="text-4xl font-bold mb-4">Technology You Can Trust</h2>
+      <p>Reliable systems built with care.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= CONTENT ================= -->
+<main class="max-w-7xl mx-auto px-4 py-16 grid gap-8 md:grid-cols-3">
+  <div class="bg-white p-6 rounded-lg shadow">
+    <h3 class="text-xl font-semibold mb-2">Smart Feeders</h3>
+    <p>Automated feeding with portion control.</p>
+  </div>
+  <div class="bg-white p-6 rounded-lg shadow">
+    <h3 class="text-xl font-semibold mb-2">Health Monitoring</h3>
+    <p>Track activity and wellness.</p>
+  </div>
+  <div class="bg-white p-6 rounded-lg shadow">
+    <h3 class="text-xl font-semibold mb-2">Pet Security</h3>
+    <p>GPS tracking and safety features.</p>
+  </div>
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="bg-gray-900 text-gray-300 text-center py-6">
+  © 2026 PetSystems. All rights reserved.
+</footer>
+
+<!-- ================= JS ================= -->
+<script>
+  const openBtn = document.getElementById("openSidebar");
+  const closeBtn = document.getElementById("closeSidebar");
+  const sidebar = document.getElementById("sidebar");
+  const overlay = document.getElementById("overlay");
+
+  function openSidebar() {
+    sidebar.classList.remove("-translate-x-full");
+    overlay.classList.remove("hidden");
+  }
+
+  function closeSidebar() {
+    sidebar.classList.add("-translate-x-full");
+    overlay.classList.add("hidden");
+  }
+
+  openBtn.addEventListener("click", openSidebar);
+  closeBtn.addEventListener("click", closeSidebar);
+  overlay.addEventListener("click", closeSidebar);
+
+  // Slider
+  let index = 0;
+  const slider = document.getElementById("slider");
+  const slides = slider.children.length;
+
+  setInterval(() => {
+    index = (index + 1) % slides;
+    slider.style.transform = `translateX(-${index * 100}%)`;
+  }, 4000);
+</script>
+</div>
+</body>
+</html>

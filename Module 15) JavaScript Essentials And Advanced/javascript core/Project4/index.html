@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Petal & Fawn - A beautiful flower shop where you can browse, create custom bouquets, and order fresh flowers.">
+    <title>Petal & Fawn 🌸 Flower Shop</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Dancing+Script:wght@600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Falling Petals Background -->
+    <div id="petals-container"></div>
+
+    <!-- ==================== AUTH PAGE ==================== -->
+    <section id="auth-page" class="page active">
+        <div class="auth-scroll-container">
+            <!-- Hero Landing -->
+            <div class="auth-hero">
+                <div class="hero-content">
+                    <!-- Cute CSS Deer -->
+                    <div class="cute-deer" id="hero-deer">
+                        <!-- Antlers -->
+                        <div class="deer-antler deer-antler-left">
+                            <div class="antler-branch antler-branch-l1"></div>
+                            <div class="antler-branch antler-branch-l2"></div>
+                        </div>
+                        <div class="deer-antler deer-antler-right">
+                            <div class="antler-branch antler-branch-r1"></div>
+                            <div class="antler-branch antler-branch-r2"></div>
+                        </div>
+                        <!-- Flower Crown -->
+                        <div class="deer-flower-crown">
+                            <span class="crown-f1">🌸</span>
+                            <span class="crown-f2">🌼</span>
+                            <span class="crown-f3">🌸</span>
+                        </div>
+                        <!-- Ears -->
+                        <div class="deer-ear deer-ear-left"></div>
+                        <div class="deer-ear deer-ear-right"></div>
+                        <!-- Face -->
+                        <div class="deer-face">
+                            <div class="deer-eye deer-eye-left">
+                                <div class="deer-pupil"></div>
+                                <div class="deer-eyelash"></div>
+                            </div>
+                            <div class="deer-eye deer-eye-right">
+                                <div class="deer-pupil"></div>
+                                <div class="deer-eyelash"></div>
+                            </div>
+                            <div class="deer-nose"></div>
+                            <div class="deer-mouth"></div>
+                            <div class="deer-blush deer-blush-left"></div>
+                            <div class="deer-blush deer-blush-right"></div>
+                            <!-- Fawn spots -->
+                            <div class="deer-spot deer-spot-1"></div>
+                            <div class="deer-spot deer-spot-2"></div>
+                            <div class="deer-spot deer-spot-3"></div>
+                        </div>
+                        <!-- Body -->
+                        <div class="deer-body">
+                            <div class="deer-body-spot deer-bs-1"></div>
+                            <div class="deer-body-spot deer-bs-2"></div>
+                            <div class="deer-body-spot deer-bs-3"></div>
+                            <div class="deer-leg deer-leg-fl"></div>
+                            <div class="deer-leg deer-leg-fr"></div>
+                            <div class="deer-flower-held">🌷</div>
+                        </div>
+                        <!-- Tail -->
+                        <div class="deer-tail"></div>
+                    </div>
+                    <h1 class="hero-title">
+                        <span class="title-petal">Petal</span>
+                        <span class="title-and">&</span>
+                        <span class="title-purr">Fawn</span>
+                    </h1>
+                    <p class="hero-subtitle">Where flowers bloom & deer roam 🦌</p>
+                    <div class="scroll-indicator" id="scroll-indicator">
+                        <span>Scroll down to enter</span>
+                        <div class="scroll-arrow">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="floating-flowers">
+                    <span class="float-flower f1">🌸</span>
+                    <span class="float-flower f2">🌺</span>
+                    <span class="float-flower f3">🌻</span>
+                    <span class="float-flower f4">🌹</span>
+                    <span class="float-flower f5">💐</span>
+                    <span class="float-flower f6">🌼</span>
+                    <span class="float-flower f7">🏵️</span>
+                    <span class="float-flower f8">🌷</span>
+                </div>
+            </div>
+
+            <!-- Auth Forms Section -->
+            <div class="auth-forms-section" id="auth-forms-section">
+                <div class="auth-container">
+                    <!-- Mini Deer peeking -->
+                    <div class="mini-deer-peek">
+                        <div class="mini-deer">
+                            <div class="mini-antler mini-antler-l"></div>
+                            <div class="mini-antler mini-antler-r"></div>
+                            <div class="mini-ear mini-ear-l"></div>
+                            <div class="mini-ear mini-ear-r"></div>
+                            <div class="mini-face">
+                                <div class="mini-eye mini-eye-l">
+                                    <div class="mini-pupil"></div>
+                                </div>
+                                <div class="mini-eye mini-eye-r">
+                                    <div class="mini-pupil"></div>
+                                </div>
+                                <div class="mini-nose"></div>
+                                <div class="mini-blush mini-blush-l"></div>
+                                <div class="mini-blush mini-blush-r"></div>
+                                <div class="mini-spot mini-spot-1"></div>
+                                <div class="mini-spot mini-spot-2"></div>
+                            </div>
+                            <div class="mini-hooves">
+                                <div class="mini-hoof"></div>
+                                <div class="mini-hoof"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="auth-tabs">
+                        <button class="auth-tab active" id="signin-tab" onclick="switchAuthTab('signin')">Sign
+                            In</button>
+                        <button class="auth-tab" id="signup-tab" onclick="switchAuthTab('signup')">Sign Up</button>
+                        <div class="tab-slider" id="tab-slider"></div>
+                    </div>
+
+                    <!-- Sign In Form -->
+                    <form class="auth-form active" id="signin-form" onsubmit="handleSignIn(event)">
+                        <div class="form-group">
+                            <label for="signin-email">📧 Email</label>
+                            <input type="email" id="signin-email" placeholder="your@email.com" required>
+                            <div class="input-flower">🌸</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="signin-password">🔒 Password</label>
+                            <input type="password" id="signin-password" placeholder="Enter password" required>
+                            <div class="input-flower">🌺</div>
+                        </div>
+                        <button type="submit" class="auth-btn" id="signin-btn">
+                            <span>Enter the Garden</span>
+                            <span class="btn-flowers">🌷🌹🌻</span>
+                        </button>
+                    </form>
+
+                    <!-- Sign Up Form -->
+                    <form class="auth-form" id="signup-form" onsubmit="handleSignUp(event)">
+                        <div class="form-group">
+                            <label for="signup-name">🌼 Full Name</label>
+                            <input type="text" id="signup-name" placeholder="Your lovely name" required>
+                            <div class="input-flower">🌸</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="signup-email">📧 Email</label>
+                            <input type="email" id="signup-email" placeholder="your@email.com" required>
+                            <div class="input-flower">🌺</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="signup-phone">📱 Phone</label>
+                            <input type="tel" id="signup-phone" placeholder="Your phone number" required>
+                            <div class="input-flower">🌻</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="signup-password">🔒 Password</label>
+                            <input type="password" id="signup-password" placeholder="Create password" required>
+                            <div class="input-flower">🌹</div>
+                        </div>
+                        <button type="submit" class="auth-btn" id="signup-btn">
+                            <span>Join the Garden</span>
+                            <span class="btn-flowers">🌷🌹🌻</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== MAIN SHOP PAGE ==================== -->
+    <section id="shop-page" class="page">
+        <!-- Navigation Bar -->
+        <nav class="shop-nav" id="shop-nav">
+            <div class="nav-brand">
+                <span class="nav-logo">🦌🌸</span>
+                <span class="nav-title">Petal & Fawn</span>
+            </div>
+            <div class="nav-welcome" id="nav-welcome">Welcome!</div>
+            <div class="hamburger-btn" id="hamburger-btn" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+
+        <!-- Side Menu -->
+        <div class="side-menu" id="side-menu">
+            <div class="menu-header">
+                <div class="menu-mascot">🦌</div>
+                <h3>Menu</h3>
+            </div>
+            <ul class="menu-items">
+                <li onclick="showSection('flowers')" class="active" id="menu-flowers">
+                    <span class="menu-icon">🌸</span>
+                    <span>All Flowers</span>
+                </li>
+                <li onclick="showSection('types')" id="menu-types">
+                    <span class="menu-icon">🌺</span>
+                    <span>Types of Flowers</span>
+                </li>
+                <li onclick="showSection('bouquet')" id="menu-bouquet">
+                    <span class="menu-icon">💐</span>
+                    <span>Create Your Bouquet</span>
+                </li>
+                <li onclick="showSection('cart')" id="menu-cart">
+                    <span class="menu-icon">🛒</span>
+                    <span>Cart</span>
+                    <span class="cart-badge" id="cart-badge">0</span>
+                </li>
+                <li onclick="handleLogout()" id="menu-logout">
+                    <span class="menu-icon">🚪</span>
+                    <span>Logout</span>
+                </li>
+            </ul>
+            <div class="menu-footer">
+                <div class="menu-mascot-sleeping">🦌💤</div>
+            </div>
+        </div>
+        <div class="menu-overlay" id="menu-overlay" onclick="toggleMenu()"></div>
+
+        <!-- Shop Content -->
+        <div class="shop-content">
+            <!-- All Flowers Section -->
+            <div class="shop-section active" id="section-flowers">
+                <div class="section-header">
+                    <h2>🌸 Our Beautiful Flowers</h2>
+                    <p>Handpicked with love by our little fawn 🦌</p>
+                </div>
+                <div class="flowers-grid" id="flowers-grid">
+                    <!-- Flowers are injected by JS -->
+                </div>
+            </div>
+
+            <!-- Types of Flowers Section -->
+            <div class="shop-section" id="section-types">
+                <div class="section-header">
+                    <h2>🌺 Types of Flowers</h2>
+                    <p>Explore our beautiful categories</p>
+                </div>
+                <div class="types-grid" id="types-grid">
+                    <!-- Types are injected by JS -->
+                </div>
+                <div class="type-flowers-display" id="type-flowers-display">
+                    <button class="back-btn" onclick="hideTypeFlowers()">← Back to Types</button>
+                    <h3 id="type-title"></h3>
+                    <div class="flowers-grid" id="type-flowers-grid"></div>
+                </div>
+            </div>
+
+            <!-- Create Bouquet Section -->
+            <div class="shop-section" id="section-bouquet">
+                <div class="section-header">
+                    <h2>💐 Create Your Bouquet</h2>
+                    <p>Drag & drop flowers to build your dream bouquet!</p>
+                </div>
+                <div class="bouquet-builder">
+                    <div class="bouquet-source">
+                        <h3>🌷 Available Flowers</h3>
+                        <div class="bouquet-flowers-list" id="bouquet-flowers-list">
+                            <!-- Draggable flowers injected by JS -->
+                        </div>
+                    </div>
+                    <div class="bouquet-workspace">
+                        <h3>💐 Your Bouquet</h3>
+                        <div class="bouquet-drop-zone" id="bouquet-drop-zone">
+                            <div class="drop-placeholder" id="drop-placeholder">
+                                <span>🌸</span>
+                                <p>Drop flowers here!</p>
+                            </div>
+                            <div class="bouquet-items" id="bouquet-items"></div>
+                        </div>
+                        <div class="bouquet-summary">
+                            <div class="bouquet-total">
+                                <span>Total:</span>
+                                <span id="bouquet-total-price">₹0.00</span>
+                            </div>
+                            <button class="add-bouquet-cart-btn" id="add-bouquet-cart-btn" onclick="addBouquetToCart()">
+                                Add Bouquet to Cart 🛒
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cart Section -->
+            <div class="shop-section" id="section-cart">
+                <div class="section-header">
+                    <h2>🛒 Your Cart</h2>
+                    <p>Ready to checkout? 🦌</p>
+                </div>
+                <div class="cart-container" id="cart-container">
+                    <div class="cart-empty" id="cart-empty">
+                        <div class="empty-mascot">🥺</div>
+                        <p>Your cart is empty!</p>
+                        <span>The little fawn is sad... add some flowers!</span>
+                    </div>
+                    <div class="cart-items" id="cart-items"></div>
+                    <div class="cart-footer" id="cart-footer" style="display:none;">
+                        <div class="cart-total">
+                            <span>Grand Total:</span>
+                            <span id="cart-total-price">₹0.00</span>
+                        </div>
+                        <button class="checkout-btn" onclick="checkout()">
+                            🌸 Checkout 🌸
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast">
+        <span class="toast-icon" id="toast-icon">🌸</span>
+        <span class="toast-msg" id="toast-msg"></span>
+    </div>
+
+    <!-- Checkout Success Modal -->
+    <div class="modal-overlay" id="checkout-modal">
+        <div class="modal">
+            <div class="modal-celebration">🎉🌸🦌🌸🎉</div>
+            <h2>Order Placed!</h2>
+            <p>Thank you for your order! Our little fawn is packing your flowers with love 💕</p>
+            <div class="modal-mascot-happy">🦌🌷</div>
+            <button class="modal-btn" onclick="closeCheckoutModal()">Continue Shopping</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

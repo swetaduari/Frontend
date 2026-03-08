@@ -1,0 +1,24 @@
+# what is oops in js?
+oops stands for object oriented programming structured language
+oops is object oriented language
+oops provides securities
+oops use class| object|inheritance|encapsulation|abstraction|polymorsphis, as a feature
+
+
+##oops features
+
+** feature in oops**
+1.class
+2.object
+3.inheritance
+   1.single
+   2.multilevel inheritance
+   3.multiple inheritance
+4.polymorphism
+ 1.method overloading
+ 2.method overding
+
+5.encapsulation
+6.abstraction
+
+## javascript supports partial oop

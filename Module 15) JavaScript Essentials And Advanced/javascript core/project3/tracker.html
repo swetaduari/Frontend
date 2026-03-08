@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Panda Expenditure Tracker — Track your expenses with style">
+    <title>Panda Tracker — Expenditure Tracker</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="tracker.css">
+</head>
+
+<body>
+    <!-- Floating Bamboo Leaves -->
+    <div class="floating-leaves" id="floatingLeaves"></div>
+
+    <!-- Header -->
+    <header class="app-header" id="appHeader">
+        <div class="header-left">
+            <div class="logo">
+                <span class="logo-panda">🐼</span>
+                <span class="logo-text">PandaTracker</span>
+            </div>
+        </div>
+        <div class="header-right">
+            <div class="user-greeting">
+                <span class="greeting-text">Welcome back!</span>
+                <span class="user-name" id="userName">User</span>
+            </div>
+            <button class="logout-btn" id="logoutBtn">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20">
+                    <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" />
+                    <polyline points="16 17 21 12 16 7" />
+                    <line x1="21" y1="12" x2="9" y2="12" />
+                </svg>
+                Sign Out
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="app-main">
+        <!-- Summary Cards -->
+        <section class="summary-section">
+            <div class="summary-card income-card" id="incomeCard">
+                <div class="card-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="23 6 13.5 15.5 8.5 10.5 1 18" />
+                        <polyline points="17 6 23 6 23 12" />
+                    </svg>
+                </div>
+                <div class="card-info">
+                    <span class="card-label">Total Income</span>
+                    <span class="card-amount" id="totalIncome">₹0.00</span>
+                </div>
+            </div>
+            <div class="summary-card expense-card" id="expenseCard">
+                <div class="card-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="23 18 13.5 8.5 8.5 13.5 1 6" />
+                        <polyline points="17 18 23 18 23 12" />
+                    </svg>
+                </div>
+                <div class="card-info">
+                    <span class="card-label">Total Expenses</span>
+                    <span class="card-amount" id="totalExpense">₹0.00</span>
+                </div>
+            </div>
+            <div class="summary-card balance-card" id="balanceCard">
+                <div class="card-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="12" y1="1" x2="12" y2="23" />
+                        <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+                    </svg>
+                </div>
+                <div class="card-info">
+                    <span class="card-label">Balance</span>
+                    <span class="card-amount" id="totalBalance">₹0.00</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Content Grid -->
+        <div class="content-grid">
+            <!-- Add Transaction -->
+            <section class="add-transaction-section">
+                <div class="section-card">
+                    <h2 class="section-title">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22"
+                            height="22">
+                            <circle cx="12" cy="12" r="10" />
+                            <line x1="12" y1="8" x2="12" y2="16" />
+                            <line x1="8" y1="12" x2="16" y2="12" />
+                        </svg>
+                        Add Transaction
+                    </h2>
+                    <form id="transactionForm" autocomplete="off">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label" for="txnDescription">Description</label>
+                                <input type="text" id="txnDescription" class="form-input"
+                                    placeholder="e.g. Grocery shopping" required>
+                            </div>
+                        </div>
+                        <div class="form-row two-col">
+                            <div class="form-group">
+                                <label class="form-label" for="txnAmount">Amount (₹)</label>
+                                <input type="number" id="txnAmount" class="form-input" placeholder="0.00" min="0.01"
+                                    step="0.01" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="txnType">Type</label>
+                                <select id="txnType" class="form-input form-select">
+                                    <option value="expense">Expense</option>
+                                    <option value="income">Income</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-row two-col">
+                            <div class="form-group">
+                                <label class="form-label" for="txnCategory">Category</label>
+                                <select id="txnCategory" class="form-input form-select">
+                                    <option value="food">🍔 Food & Dining</option>
+                                    <option value="transport">🚌 Transport</option>
+                                    <option value="shopping">🛍️ Shopping</option>
+                                    <option value="entertainment">🎬 Entertainment</option>
+                                    <option value="bills">📄 Bills & Utilities</option>
+                                    <option value="health">💊 Health</option>
+                                    <option value="education">📚 Education</option>
+                                    <option value="salary">💰 Salary</option>
+                                    <option value="freelance">💻 Freelance</option>
+                                    <option value="other">📦 Other</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="txnDate">Date</label>
+                                <input type="date" id="txnDate" class="form-input" required>
+                            </div>
+                        </div>
+                        <button type="submit" class="submit-btn" id="addTxnBtn">
+                            <span class="btn-text">Add Transaction</span>
+                            <span class="btn-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <line x1="12" y1="5" x2="12" y2="19" />
+                                    <line x1="5" y1="12" x2="19" y2="12" />
+                                </svg>
+                            </span>
+                        </button>
+                    </form>
+                </div>
+            </section>
+
+            <!-- Category Breakdown -->
+            <section class="breakdown-section">
+                <div class="section-card">
+                    <h2 class="section-title">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22"
+                            height="22">
+                            <path d="M21.21 15.89A10 10 0 1 1 8 2.83" />
+                            <path d="M22 12A10 10 0 0 0 12 2v10z" />
+                        </svg>
+                        Spending by Category
+                    </h2>
+                    <div class="category-chart" id="categoryChart">
+                        <div class="empty-state">
+                            <span class="empty-panda">🐼</span>
+                            <p>No expenses yet.<br>Add a transaction to see your breakdown!</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Transaction History -->
+        <section class="history-section">
+            <div class="section-card">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22"
+                            height="22">
+                            <circle cx="12" cy="12" r="10" />
+                            <polyline points="12 6 12 12 16 14" />
+                        </svg>
+                        Transaction History
+                    </h2>
+                    <div class="filter-group">
+                        <button class="filter-btn active" data-filter="all">All</button>
+                        <button class="filter-btn" data-filter="income">Income</button>
+                        <button class="filter-btn" data-filter="expense">Expense</button>
+                    </div>
+                </div>
+                <div class="transaction-list" id="transactionList">
+                    <div class="empty-state">
+                        <span class="empty-panda">🐼</span>
+                        <p>No transactions yet.<br>Start tracking your expenses!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Delete Confirmation Modal -->
+    <div class="modal-overlay" id="deleteModal">
+        <div class="modal-content">
+            <div class="modal-icon">🗑️</div>
+            <h3 class="modal-title">Delete Transaction?</h3>
+            <p class="modal-message">This action cannot be undone.</p>
+            <div class="modal-actions">
+                <button class="modal-btn cancel-btn" id="cancelDelete">Cancel</button>
+                <button class="modal-btn confirm-btn" id="confirmDelete">Delete</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="tracker.js"></script>
+</body>
+
+</html>

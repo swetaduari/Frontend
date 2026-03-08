@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pet Systems</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Tailwind CSS v4 -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-50 text-gray-800 overflow-x-hidden">
+
+<!-- ================= LOADER ================= -->
+<div id="loader" class="fixed inset-0 bg-white z-[999] flex items-center justify-center">
+  <div class="animate-spin rounded-full h-16 w-16 border-4 border-emerald-500 border-t-transparent"></div>
+</div>
+
+<!-- ================= OVERLAY ================= -->
+<div id="overlay" class="fixed inset-0 bg-black/50 z-40 hidden"></div>
+
+<!-- ================= SIDEBAR ================= -->
+<aside id="sidebar"
+  class="fixed top-0 left-0 h-full w-64 bg-white shadow-lg z-50
+         transform -translate-x-full transition-transform duration-300">
+
+  <div class="p-4 flex justify-between items-center border-b">
+    <h2 class="text-xl font-bold text-emerald-600">PetSystems</h2>
+    <button id="closeSidebar" class="text-2xl">&times;</button>
+  </div>
+
+  <nav class="p-4 space-y-4 font-medium">
+    <a href="#" class="block hover:text-emerald-600">Home</a>
+    <a href="#" class="block hover:text-emerald-600">Products</a>
+    <a href="#" class="block hover:text-emerald-600">Services</a>
+    <a href="#" class="block hover:text-emerald-600">About</a>
+    <a href="#" class="block hover:text-emerald-600">Contact</a>
+  </nav>
+</aside>
+
+<!-- ================= HEADER ================= -->
+<header class="bg-white shadow relative z-30">
+  <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+    <button id="openSidebar" class="md:hidden text-2xl">☰</button>
+    <h1 class="text-2xl font-bold text-emerald-600">PetSystems</h1>
+
+    <nav class="hidden md:flex space-x-6 font-medium">
+      <a href="#" class="hover:text-emerald-600">Home</a>
+      <a href="#" class="hover:text-emerald-600">Products</a>
+      <a href="#" class="hover:text-emerald-600">Services</a>
+      <a href="#" class="hover:text-emerald-600">About</a>
+      <a href="#" class="hover:text-emerald-600">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ================= SLIDER ================= -->
+<section class="relative overflow-hidden">
+  <div id="slider" class="flex transition-transform duration-700">
+
+    <div class="min-w-full h-[70vh] bg-cover bg-center flex items-center justify-center text-white"
+      style="background-image:url('https://images.unsplash.com/photo-1517849845537-4d257902454a')">
+      <div class="bg-black/50 p-8 rounded">
+        <h2 class="text-4xl font-bold mb-3">Smart Dog Care</h2>
+        <p>Automated systems for feeding & tracking</p>
+      </div>
+    </div>
+
+    <div class="min-w-full h-[70vh] bg-cover bg-center flex items-center justify-center text-white"
+      style="background-image:url('https://images.unsplash.com/photo-1518791841217-8f162f1e1131')">
+      <div class="bg-black/50 p-8 rounded">
+        <h2 class="text-4xl font-bold mb-3">Happy Cats</h2>
+        <p>Health monitoring made easy</p>
+      </div>
+    </div>
+
+    <div class="min-w-full h-[70vh] bg-cover bg-center flex items-center justify-center text-white"
+      style="background-image:url('https://images.unsplash.com/photo-1601758125946-6ec2ef64daf8')">
+      <div class="bg-black/50 p-8 rounded">
+        <h2 class="text-4xl font-bold mb-3">Modern Pet Systems</h2>
+        <p>Technology you can trust</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= CONTENT ================= -->
+<main class="max-w-7xl mx-auto px-4 py-16 grid gap-8 md:grid-cols-3">
+
+  <div class="bg-white shadow rounded overflow-hidden">
+    <img src="https://images.unsplash.com/photo-1598133894008-61f7fdb8cc3a" class="h-48 w-full object-cover">
+    <div class="p-4">
+      <h3 class="text-xl font-semibold">Smart Feeders</h3>
+      <p>Automatic portion-controlled feeding.</p>
+    </div>
+  </div>
+
+  <div class="bg-white shadow rounded overflow-hidden">
+    <img src="https://images.unsplash.com/photo-1558944351-cd2f85c3b2b5" class="h-48 w-full object-cover">
+    <div class="p-4">
+      <h3 class="text-xl font-semibold">Health Monitoring</h3>
+      <p>Track activity, sleep & nutrition.</p>
+    </div>
+  </div>
+
+  <div class="bg-white shadow rounded overflow-hidden">
+    <img src="https://images.unsplash.com/photo-1525253086316-d0c936c814f8" class="h-48 w-full object-cover">
+    <div class="p-4">
+      <h3 class="text-xl font-semibold">Pet Security</h3>
+      <p>GPS tracking & safety alerts.</p>
+    </div>
+  </div>
+
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="bg-gray-900 text-gray-300 text-center py-6">
+  © 2026 PetSystems. All rights reserved.
+</footer>
+
+<!-- ================= JS ================= -->
+<script>
+  // Loader
+  window.addEventListener("load", () => {
+    document.getElementById("loader").style.display = "none";
+  });
+
+  // Sidebar
+  const openBtn = document.getElementById("openSidebar");
+  const closeBtn = document.getElementById("closeSidebar");
+  const sidebar = document.getElementById("sidebar");
+  const overlay = document.getElementById("overlay");
+
+  openBtn.onclick = () => {
+    sidebar.classList.remove("-translate-x-full");
+    overlay.classList.remove("hidden");
+  };
+
+  closeBtn.onclick = overlay.onclick = () => {
+    sidebar.classList.add("-translate-x-full");
+    overlay.classList.add("hidden");
+  };
+
+  // Slider
+  let index = 0;
+  const slider = document.getElementById("slider");
+  const slides = slider.children.length;
+
+  setInterval(() => {
+    index = (index + 1) % slides;
+    slider.style.transform = `translateX(-${index * 100}%)`;
+  }, 4000);
+</script>
+
+</body>
+</html>
