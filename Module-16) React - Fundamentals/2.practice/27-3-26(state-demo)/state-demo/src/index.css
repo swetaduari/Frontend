@@ -1,0 +1,29 @@
+body 
+{
+margin:0;
+padding:0;
+overflow-x: hidden; 
+}
+@media only screen and (max-width:587px)
+{
+body 
+{
+background-color: rgb(146, 171, 37);  
+}  
+.app
+{
+width: 90% !important;
+height: auto !important;
+margin: auto !important;
+font-size: 15px !important;  
+margin-top: 12% !important;
+font-weight: 100 !important;
+}  
+.btn-danger
+{
+width: 90% !important;
+height: auto;
+margin: auto;
+font-size: 15px !important;  
+}
+}  
