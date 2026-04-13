@@ -5,5 +5,5 @@ export default defineConfig({
   plugins: [react(),
     
   ],
-    base: process.env.VITE_BASE_PATH || 
+    base: process.env.VITE_BASE_PATH ||'/Frontend/tree/main/Module-16)%20React%20-%20Fundamentals/4.projects/patel-resturents-app',
 })
